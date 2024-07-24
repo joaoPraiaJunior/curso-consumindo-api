@@ -4,7 +4,7 @@ const elementos = {
 
 const containerDeVideos = document.querySelector(`${elementos.containerDeVideos}`);
 
-const api = fetch('http://localhost:3000/videos')
+const api = fetch('http://localhost:3000/video')
     .then(resposta => resposta.json())
     .then((videos) => videos.forEach(video => {
         containerDeVideos.innerHTML += `
