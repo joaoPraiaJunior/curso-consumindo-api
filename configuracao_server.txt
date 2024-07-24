@@ -1,0 +1,5 @@
+Instalar o servidor backend:
+npm install -g json-server@0.17.4
+
+Executar o servidor:
+json-server --watch backend/videos.json
