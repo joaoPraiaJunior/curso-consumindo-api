@@ -1,8 +1,10 @@
 const elementos = {
     containerDeVideos: '[data-js="container-videos"]',
+    barraDePesquisa: '[data-js="barra-de-pesquisa"]',
 }
 
 const containerDeVideos = document.querySelector(`${elementos.containerDeVideos}`);
+const barraDePesquisa = document.querySelector(`${elementos.barraDePesquisa}`);
 
 async function buscarEMostrarVideos() {
 
