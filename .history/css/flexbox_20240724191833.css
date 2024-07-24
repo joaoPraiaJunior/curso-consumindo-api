@@ -183,7 +183,7 @@
 }
 
 .descricao-video .img-canal {
-  grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 3 / 4;
 } 
 
 @media (min-width: 834px) {

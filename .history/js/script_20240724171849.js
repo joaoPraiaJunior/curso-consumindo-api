@@ -1,12 +1,10 @@
 const elementos = {
     containerDeVideos: '[data-js="container-videos"]',
     barraDePesquisa: '[data-js="barra-de-pesquisa"]',
-    botaoCategoria: '[data-js="categoria"]',
 }
 
 const containerDeVideos = document.querySelector(`${elementos.containerDeVideos}`);
 const barraDePesquisa = document.querySelector(`${elementos.barraDePesquisa}`);
-const botaoCategoria = document.querySelectorAll(`${elementos.botaoCategoria}`);
 
 async function buscarEMostrarVideos() {
 
@@ -22,7 +20,6 @@ async function buscarEMostrarVideos() {
                     <img class="img-canal" src = "${video.imagem}" alt="Logo do Canal">
                     <h3 class="titulo-video">${video.titulo}</h3>
                     <p class="titulo-canal">${video.descricao}</p>
-                    <p class="categoria"><strong>Categoria: </strong>${video.categoria}</p>
                 </div>
             </li>
         `;
@@ -38,26 +35,20 @@ barraDePesquisa.addEventListener('input', filtrarPesquisa);
 
 function filtrarPesquisa() {
     const videos = document.querySelectorAll(".videos__item");
-    const valorDoFiltro = barraDePesquisa.value.toLowerCase();
-    videos.forEach((video) => {
-        const titulo = video.querySelector(".titulo-video").textContent.toLowerCase();
-        video.style.display = valorDoFiltro ? titulo.includes(valorDoFiltro) ? "block" : "none": "block";
-    });
+
+    if (barraDePesquisa.value !== "") {
+        for(let video of videos) {
+            let titulo = video.querySelector(".titulo-video").textContent.toLowerCase();
+            let valorDoFiltro = barraDePesquisa.value.toLowerCase();
+
+            if(!titulo.includes(valorDoFiltro)) {
+                video.style.display = "none";
+            } else {
+                video.style.display = "block";
+            }
+        }
+
+    } else {
+        video.style.display = "block";
+    }
 }
-
-botaoCategoria.forEach(botao => {
-    let nomeDaCategoria = botao.getAttribute('name');
-    botao.addEventListener('click', () => filtrarPorCategoria(nomeDaCategoria));
-});
-
-function filtrarPorCategoria(categoria) {
-    const videos = document.querySelectorAll(".videos__item");
-    const valorDoFiltro = categoria.toLowerCase();
-    videos.forEach((video) => {
-        const categoria = video.querySelector(".categoria").textContent.toLowerCase()
-        video.style.display =  valorDoFiltro !== "tudo" ? categoria.includes(valorDoFiltro) ? "block" : "none" : "block";
-    });
-}
-
-
-
