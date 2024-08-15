@@ -31,12 +31,13 @@
                 <a href="#" class="cabecalho__notificacoes"></a>
                 <a href="#" class="cabecalho__avatar"></a>
                 <label class="cabecalho__switch">
-                    <input type="checkbox" class="cabecalho__switch-input" data-js="modo-escuro" aria-label="modo claro">
+                    <input type="checkbox" class="cabecalho__switch-input" data-js="modo-escuro">
                     <span class="cabecalho__switch-slider"></span>
                 </label>
             </div>
         </nav>
     </header>
+
     <!-- Menu lateral -->
 
     <aside class="menu__container-wrapper">
@@ -192,56 +193,32 @@
             </section>
         </aside>
     </aside>
-    <main>
 
-        <div class="superior__secao__container">
-            <button name="Tudo" class="botao-categoria selecionado">
-                Tudo
-            </button>
-
-            <button name="Debates" class="botao-categoria">
-                Debates
-            </button>
-
-            <button name="Ao Vivo" class="botao-categoria">
-                Ao Vivo
-            </button>
-
-            <button name="Podcasts" class="botao-categoria">
-                Podcasts
-            </button>
-
-            <button name="Front-end" class="botao-categoria">
-                Front-end
-            </button>
-
-            <button name="Mobile" class="botao-categoria">
-                Mobile
-            </button>
-
-            <button name="Data Science" class="botao-categoria">
-                Data Science
-            </button>
-
-            <button name="Apps" class="botao-categoria">
-                Apps
-            </button>
-
-            <button name="Programação" class="botao-categoria">
-                Programação
-            </button>
-
-            <button name="Inteligência Artificial" class="botao-categoria">
-                Inteligência Artificial
-            </button>
-            <button name="Inovação" class="botao-categoria">
-                Inovação
-            </button>
+    <section class="superior__secao__container">
+        <div class="superior__secao__container-wrapper">
+            <a href="#" name="Tudo" class="superior__item" data-js="categoria">Tudo</a>
+            <a href="#" name="Debates" class="superior__item" data-js="categoria">Debates</a>
+            <a href="#" name="Ao Vivo" class="superior__item" data-js="categoria">Ao Vivo</a>
+            <a href="#" name="Podcasts" class="superior__item" data-js="categoria">Podcasts</a>
+            <a href="#" name="Front-end" class="superior__item" data-js="categoria">Front-end</a>
+            <a href="#" name="Mobile" class="superior__item" data-js="categoria">Mobile</a>
+            <a href="#" name="Data Science" class="superior__item" data-js="categoria">Data Science</a>
+            <a href="#" name="Apps" class="superior__item" data-js="categoria">Apps</a>
+            <a href="#" name="Programação" class="superior__item" data-js="categoria">Programação</a>
+            <a href="#" name="Inteligência Artificial" class="superior__item" data-js="categoria">Inteligência Artificial</a>
+            <a href="#" name="Inovação" class="superior__item" data-js="categoria">Inovação</a>
         </div>
+
+        <label class="superior__slider">
+            <span><img src="./img/arrow_forward_ios.png" alt="Flecha direcionada para a direita"></span>
+        </label>
+    </section>
+
+    <main>
         <ul class="videos__container" data-js="container-videos">
 
         </ul>
     </main>
-    <script type="module" src="js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
 </body>
 </html>
