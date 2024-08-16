@@ -1,5 +1,4 @@
 function filtrarVideosPorBotoes() {
-    
     const elementos = {
         botaoCategoria: '[data-js="categoria"]',
         videos: '[data-js="videos"]',

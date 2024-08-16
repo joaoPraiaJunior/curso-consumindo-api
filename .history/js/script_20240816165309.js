@@ -1,4 +1,3 @@
-import expandirMenu from "./expandirMenu.js";
 import filtrarVideos from "./filtrarVideos.js";
 import filtrarVideosPorBotoes from "./filtrarVideosPorBotoes.js";
 import temaEscuro from "./temaEscuro.js";
