@@ -9,17 +9,9 @@ function filtrarVideosPorBotoes() {
 
     botaoCategoria.forEach(botao => {
         let nomeDaCategoria = botao.getAttribute('name');
-        botao.addEventListener('click', () => {
-            filtrarPorCategoria(nomeDaCategoria);
-            alteraOFocoDoBotao(botao);
-        });
+        botao.addEventListener('click', () => filtrarPorCategoria(nomeDaCategoria));
     });
 
-    function alteraOFocoDoBotao(botao) {
-        const botaoSetado = document.getElementsByClassName('selecionado');
-        botaoSetado[0].classList.remove('selecionado');
-        botao.classList.add('selecionado');
-    }
 
     function filtrarPorCategoria(nomeDaCategoria) {
         const videos = document.querySelectorAll(elementos.videos);

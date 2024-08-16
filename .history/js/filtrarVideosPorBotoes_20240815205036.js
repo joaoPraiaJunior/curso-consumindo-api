@@ -21,6 +21,7 @@ function filtrarVideosPorBotoes() {
         botao.classList.add('selecionado');
     }
 
+
     function filtrarPorCategoria(nomeDaCategoria) {
         const videos = document.querySelectorAll(elementos.videos);
         const valorDoFiltro = nomeDaCategoria.toLowerCase();
