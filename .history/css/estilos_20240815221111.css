@@ -191,6 +191,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .cabecalho__switch-input:focus+.cabecalho__switch-slider {
   outline: auto 1px;
+
 }
 
 /* MENU LATERAL */
