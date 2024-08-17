@@ -8,7 +8,6 @@ function filtrarVideosPorBotoes() {
     }
 
     const botaoCategoria = document.querySelectorAll(elementos.botaoCategoria);
-    const containerVideos = document.querySelector(elementos.containerVideos);
 
     botaoCategoria.forEach(botao => {
         let nomeDaCategoria = botao.getAttribute('name');
@@ -27,8 +26,7 @@ function filtrarVideosPorBotoes() {
 
 
     function mudarCategotiaNoPainelDeVideos(nomeDaCategoria) {
-        const categoriaSelecionada = document.querySelector(`[name="${nomeDaCategoria}"]`).id;
-        containerVideos.setAttribute('aria-labelledby', categoriaSelecionada);
+        
     }
 
     function alteraOFocoDoBotao(nomeDaCategoria) {
