@@ -1,5 +1,4 @@
 function expandirMenu() {
-
     const elementos = {
         secoesDoMenu: '[data-js="secao-menu"]'
     }
@@ -28,41 +27,36 @@ function expandirMenu() {
     }
 
     function criarBotaoDeExpandir(secao, excessoDeItensDoMenu) {
-        const idDaLista = secao.querySelector('ul').id
+        const idDaLista = secao.querySelector('#menu__canais').id
         const botao = document.createElement('button');
         const icone = document.createElement('i');
-        const span = document.createElement('span');
         botao.classList.add('menu__itens', 'menu__botao-expandir-canais');
         botao.setAttribute('data-js', 'botao-expandir');
         botao.setAttribute('aria-expanded', 'false');
         botao.setAttribute('aria-controls', idDaLista);
         icone.classList.add('icone__mostrar');
-        span.textContent = `Mostrar mais ${excessoDeItensDoMenu.length}`;
+        botao.textContent = `Mostrar mais ${excessoDeItensDoMenu.length}`;
         botao.append(icone, span);
         secao.append(botao);
 
         expandirOuRecolherMenu(botao, excessoDeItensDoMenu);
+
+        return botao;
     }
 
     function expandirOuRecolherMenu(botao, excessoDeItensDoMenu) {
 
         botao.addEventListener('click', () => {
             const botaoExpandido = botao.getAttribute('aria-expanded');
-            const textoDoBotao = botao.querySelector('span');
-            const focoNoPrimeiroItemExpandido = excessoDeItensDoMenu[0].querySelector('a');
             excessoDeItensDoMenu.forEach(item => {
                 item.classList.toggle('escondido');
             });
 
             if (botaoExpandido === 'false') {
                 botao.setAttribute('aria-expanded', 'true');
-                textoDoBotao.textContent = 'Mostrar menos';
-                focoNoPrimeiroItemExpandido.focus();
-            } else {
-                botao.setAttribute('aria-expanded', 'false');
-                textoDoBotao.textContent = `Mostrar mais ${excessoDeItensDoMenu.length}`;
             }
         });
+
     }
 }
 

@@ -6,7 +6,6 @@
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 1;
 }
 
 .cabecalho__pesquisar__item {
@@ -99,15 +98,7 @@
 
 .descricao-video .link-img-canal {
   grid-area: 1 / 1 / 3 / 2;
-}
-
-.descricao-video .img-canal {
-  grid-area: 1 / 1 / 3 / 2;
-}
-
-.descricao-video .categoria {
-    grid-area: 3 / 2 / 4 / 3;
-}
+} 
 
 @media (min-width: 834px) {
   /* MENU LATERAL*/
@@ -169,7 +160,7 @@
     align-items: center;
   }
 
-  .menu__lista li.escondido {
+  .menu__lista.escondido {
     display: none;
   }
 

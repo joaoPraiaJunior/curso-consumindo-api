@@ -1,5 +1,4 @@
 function expandirMenu() {
-
     const elementos = {
         secoesDoMenu: '[data-js="secao-menu"]'
     }
@@ -42,6 +41,7 @@ function expandirMenu() {
         secao.append(botao);
 
         expandirOuRecolherMenu(botao, excessoDeItensDoMenu);
+
     }
 
     function expandirOuRecolherMenu(botao, excessoDeItensDoMenu) {
@@ -49,7 +49,6 @@ function expandirMenu() {
         botao.addEventListener('click', () => {
             const botaoExpandido = botao.getAttribute('aria-expanded');
             const textoDoBotao = botao.querySelector('span');
-            const focoNoPrimeiroItemExpandido = excessoDeItensDoMenu[0].querySelector('a');
             excessoDeItensDoMenu.forEach(item => {
                 item.classList.toggle('escondido');
             });
@@ -57,12 +56,12 @@ function expandirMenu() {
             if (botaoExpandido === 'false') {
                 botao.setAttribute('aria-expanded', 'true');
                 textoDoBotao.textContent = 'Mostrar menos';
-                focoNoPrimeiroItemExpandido.focus();
             } else {
                 botao.setAttribute('aria-expanded', 'false');
                 textoDoBotao.textContent = `Mostrar mais ${excessoDeItensDoMenu.length}`;
             }
         });
+
     }
 }
 

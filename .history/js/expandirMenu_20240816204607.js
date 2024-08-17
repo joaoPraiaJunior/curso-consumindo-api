@@ -42,6 +42,7 @@ function expandirMenu() {
         secao.append(botao);
 
         expandirOuRecolherMenu(botao, excessoDeItensDoMenu);
+
     }
 
     function expandirOuRecolherMenu(botao, excessoDeItensDoMenu) {

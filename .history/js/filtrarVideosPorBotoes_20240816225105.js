@@ -28,7 +28,7 @@ function filtrarVideosPorBotoes() {
 
     function mudarCategotiaNoPainelDeVideos(nomeDaCategoria) {
         const categoriaSelecionada = document.querySelector(`[name="${nomeDaCategoria}"]`).id;
-        containerVideos.setAttribute('aria-labelledby', categoriaSelecionada);
+        containerVideos.ariaLabelledby = categoriaSelecionada;
     }
 
     function alteraOFocoDoBotao(nomeDaCategoria) {

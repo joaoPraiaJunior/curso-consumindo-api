@@ -46,9 +46,11 @@ function expandirMenu() {
 
     function expandirOuRecolherMenu(botao, excessoDeItensDoMenu) {
 
-        botao.addEventListener('click', () => {
+        botao.addEventListener('click', (evento) => {
+            const teste = evento.target.closest('[data-js="botao-expandir"]');
             const botaoExpandido = botao.getAttribute('aria-expanded');
             const textoDoBotao = botao.querySelector('span');
+            console.log(teste);
             const focoNoPrimeiroItemExpandido = excessoDeItensDoMenu[0].querySelector('a');
             excessoDeItensDoMenu.forEach(item => {
                 item.classList.toggle('escondido');

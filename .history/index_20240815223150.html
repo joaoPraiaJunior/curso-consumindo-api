@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/flexbox.css">
     <title>VidFlow</title>
     <link rel="shortcut icon" href="./img/Favicon.png" type="image/x-icon">
 </head>
-<body>
+<body></a>
     <header>
         <nav class="cabecalho__container">
             <div class="logo__item">
-                <a href="/"><img src="./img/modo_claro/vidflow-logo-light-mode.png" alt="Página do VidFlow"></a>
+                <a href="/"><img src="./img/modo_claro/vidflow-logo-light-mode.png" alt="Logo da página do       VidFlow"></a>
             </div>
             <div class="cabecalho__pesquisar__item">
                 <form class="form__pesquisa">
@@ -34,7 +34,7 @@
                 </ul>
 
                 <label class="cabecalho__switch">
-                    <input type="checkbox" class="cabecalho__switch-input" data-js="modo-escuro" aria-label="Modo claro">
+                    <input type="checkbox" class="cabecalho__switch-input" data-js="modo-escuro" aria-label="modo claro">
                     <span class="cabecalho__switch-slider"></span>
                 </label>
             </div>
@@ -42,9 +42,9 @@
     </header>
     <!-- Menu lateral -->
 
-    <div class="menu__container-wrapper">
+    <aside class="menu__container-wrapper">
         <aside class="menu__container">
-            <section class="menu__secao" aria-label="Links principais">
+            <section class="menu__secao">
                 <ul class="menu__lista menu__links-principais">
                     <li>
                         <a class="menu__itens" href="#">
@@ -83,7 +83,7 @@
                 </ul>
             </section>
 
-            <section class="menu__secao" aria-label="Links para vídeos guardados na conta">
+            <section class="menu__secao">
                 <ul class="menu__lista">
                     <li>
                         <a class="menu__itens" href="#">
@@ -108,10 +108,10 @@
                 </ul>
             </section>
 
-            <section class="menu__secao" aria-labelledby="inscricoes" data-js="secao-menu">
-                <h2 id="inscricoes" class="menu__secao-titulo">Inscrições</h2>
+            <section class="menu__secao">
+                <span class="menu__secao-titulo">Inscrições</span>
 
-                <ul id="menu__canais" class="menu__lista">
+                <ul class="menu__lista">
                     <li class="menu__canal">
                         <a class="menu__itens" href="#">
                             <i class="icone__alura"></i>
@@ -147,28 +147,33 @@
                         </a>
                     </li>
 
-                    <li class="menu__canal">
+                    <li class="menu__canal escondido">
                         <a class="menu__itens" href="#">
                             <i class="icone__nerd"></i>
                             <span>Jovem Nerd</span>
                         </a>
                     </li>
 
-                    <li class="menu__canal">
+                    <li class="menu__canal escondido">
                         <a class="menu__itens" href="#">
                             <i class="icone__deschamps"></i>
                             <span>Felipe Deschamps</span>
                         </a>
                     </li>
                 </ul>
+
+                <button class="menu__itens menu__botao-expandir-canais">
+                    <i class="icone__mostrar"></i>
+                    <span class="texto-colapsar-canais">Mostrar mais 2</span>
+                </button>
             </section>
 
-            <section class="menu__secao" aria-labelledby="mais-da-pagina" data-js="secao-menu">
-                <h2 id="mais-da-pagina" class="menu__secao-titulo">
+            <section class="menu__secao">
+                <span class="menu__secao-titulo">
                     Mais da página
-                </h2>
+                </span>
 
-                <ul id="mais__paginas" class="menu__lista">
+                <ul class="menu__lista">
                     <li class="premium">
                         <a class="menu__itens" href="#">
                             <i class="icone__videos"></i>
@@ -186,63 +191,59 @@
                             <i class="icone__jogos"></i>
                             <span>Jogos</span></a>
                     </li>
-
                 </ul>
             </section>
         </aside>
-    </div>
+    </aside>
     <main>
-        <div role="tablist" class="superior__secao__container">
-            <button id="botao__tudo" role="tab" aria-selected="true"  aria-controls="painel__videos" name="Tudo" class="botao-categoria selecionado" data-js="botao-categoria">
+
+        <div class="superior__secao__container">
+            <button name="Tudo" class="botao-categoria selecionado" data-js="botao-categoria">
                 Tudo
             </button>
 
-            <button id="botao__debates" role="tab" aria-selected="false" aria-controls="painel__videos" name="Debates" class="botao-categoria" data-js="botao-categoria">
+            <button name="Debates" class="botao-categoria" data-js="botao-categoria">
                 Debates
             </button>
 
-            <button id="botao__ao__vivo" role="tab" aria-selected="false" aria-controls="painel__videos" name="Ao Vivo" class="botao-categoria" data-js="botao-categoria">
+            <button name="Ao Vivo" class="botao-categoria" data-js="botao-categoria">
                 Ao Vivo
             </button>
 
-            <button id="botao__podcast" role="tab" aria-selected="false" aria-controls="painel__videos" name="Podcasts" class="botao-categoria" data-js="botao-categoria">
+            <button name="Podcasts" class="botao-categoria" data-js="botao-categoria">
                 Podcasts
             </button>
 
-            <button id="botao__front__end" role="tab" aria-selected="false" aria-controls="painel__videos" name="Front-end" class="botao-categoria" data-js="botao-categoria">
+            <button name="Front-end" class="botao-categoria" data-js="botao-categoria">
                 Front-end
             </button>
 
-            <button id="botao__mobile" role="tab" aria-selected="false" aria-controls="painel__videos" name="Mobile" class="botao-categoria" data-js="botao-categoria">
+            <button name="Mobile" class="botao-categoria" data-js="botao-categoria">
                 Mobile
             </button>
 
-            <button id="botao__data__science" role="tab" aria-selected="false" aria-controls="painel__videos" name="Data Science" class="botao-categoria" data-js="botao-categoria">
+            <button name="Data Science" class="botao-categoria" data-js="botao-categoria">
                 Data Science
             </button>
 
-            <button id="botao__apps" role="tab" aria-selected="false" aria-controls="painel__videos" name="Apps" class="botao-categoria" data-js="botao-categoria">
+            <button name="Apps" class="botao-categoria" data-js="botao-categoria">
                 Apps
             </button>
 
-            <button id="botao__programacao" role="tab" aria-selected="false" aria-controls="painel__videos" name="Programação" class="botao-categoria" data-js="botao-categoria">
+            <button name="Programação" class="botao-categoria" data-js="botao-categoria">
                 Programação
             </button>
 
-            <button id="botao__inteligencia__artificial" role="tab" aria-selected="false" aria-controls="painel__videos" name="Inteligência Artificial" class="botao-categoria" data-js="botao-categoria">
+            <button name="Inteligência Artificial" class="botao-categoria" data-js="botao-categoria">
                 Inteligência Artificial
             </button>
-            <button id="botao__inovacao" role="tab" aria-selected="false" aria-controls="painel__videos" name="Inovação" class="botao-categoria" data-js="botao-categoria">
+            <button name="Inovação" class="botao-categoria" data-js="botao-categoria">
                 Inovação
             </button>
         </div>
-        <h1 class="videos__titulo"> Seção de vídeos </h1>
+        <ul class="videos__container" data-js="container-videos">
 
-        <div id="painel__videos" role="tabpanel">
-            <ul class="videos__container" aria-labelledby="botao__tudo" data-js="container-videos">
-
-            </ul>
-        </div>
+        </ul>
     </main>
     <script type="module" src="js/script.js"></script>
 </body>

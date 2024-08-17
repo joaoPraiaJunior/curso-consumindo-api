@@ -192,57 +192,59 @@
         </aside>
     </div>
     <main>
-        <div role="tablist" class="superior__secao__container">
-            <button id="botao__tudo" role="tab" aria-selected="true"  aria-controls="painel__videos" name="Tudo" class="botao-categoria selecionado" data-js="botao-categoria">
+        <div class="superior__secao__container">
+            <button name="Tudo" class="botao-categoria selecionado" data-js="botao-categoria">
                 Tudo
             </button>
 
-            <button id="botao__debates" role="tab" aria-selected="false" aria-controls="painel__videos" name="Debates" class="botao-categoria" data-js="botao-categoria">
+            <button name="Debates" class="botao-categoria" data-js="botao-categoria">
                 Debates
             </button>
 
-            <button id="botao__ao__vivo" role="tab" aria-selected="false" aria-controls="painel__videos" name="Ao Vivo" class="botao-categoria" data-js="botao-categoria">
+            <button name="Ao Vivo" class="botao-categoria" data-js="botao-categoria">
                 Ao Vivo
             </button>
 
-            <button id="botao__podcast" role="tab" aria-selected="false" aria-controls="painel__videos" name="Podcasts" class="botao-categoria" data-js="botao-categoria">
+            <button name="Podcasts" class="botao-categoria" data-js="botao-categoria">
                 Podcasts
             </button>
 
-            <button id="botao__front__end" role="tab" aria-selected="false" aria-controls="painel__videos" name="Front-end" class="botao-categoria" data-js="botao-categoria">
+            <button name="Front-end" class="botao-categoria" data-js="botao-categoria">
                 Front-end
             </button>
 
-            <button id="botao__mobile" role="tab" aria-selected="false" aria-controls="painel__videos" name="Mobile" class="botao-categoria" data-js="botao-categoria">
+            <button name="Mobile" class="botao-categoria" data-js="botao-categoria">
                 Mobile
             </button>
 
-            <button id="botao__data__science" role="tab" aria-selected="false" aria-controls="painel__videos" name="Data Science" class="botao-categoria" data-js="botao-categoria">
+            <button name="Data Science" class="botao-categoria" data-js="botao-categoria">
                 Data Science
             </button>
 
-            <button id="botao__apps" role="tab" aria-selected="false" aria-controls="painel__videos" name="Apps" class="botao-categoria" data-js="botao-categoria">
+            <button name="Apps" class="botao-categoria" data-js="botao-categoria">
                 Apps
             </button>
 
-            <button id="botao__programacao" role="tab" aria-selected="false" aria-controls="painel__videos" name="Programação" class="botao-categoria" data-js="botao-categoria">
+            <button name="Programação" class="botao-categoria" data-js="botao-categoria">
                 Programação
             </button>
 
-            <button id="botao__inteligencia__artificial" role="tab" aria-selected="false" aria-controls="painel__videos" name="Inteligência Artificial" class="botao-categoria" data-js="botao-categoria">
+            <button name="Inteligência Artificial" class="botao-categoria" data-js="botao-categoria">
                 Inteligência Artificial
             </button>
-            <button id="botao__inovacao" role="tab" aria-selected="false" aria-controls="painel__videos" name="Inovação" class="botao-categoria" data-js="botao-categoria">
+            <button name="Inovação" class="botao-categoria" data-js="botao-categoria">
                 Inovação
             </button>
         </div>
-        <h1 class="videos__titulo"> Seção de vídeos </h1>
 
-        <div id="painel__videos" role="tabpanel">
-            <ul class="videos__container" aria-labelledby="botao__tudo" data-js="container-videos">
 
-            </ul>
+        <div class="videos__container">
+            <h1> Seção de vídeos </h1>
         </div>
+
+        <ul class="videos__container" data-js="container-videos">
+
+        </ul>
     </main>
     <script type="module" src="js/script.js"></script>
 </body>

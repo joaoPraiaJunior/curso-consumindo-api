@@ -4,18 +4,15 @@ function filtrarVideosPorBotoes() {
         botaoCategoria: '[data-js="botao-categoria"]',
         videos: '[data-js="videos"]',
         categoria: '[data-js="categoria"]',
-        containerVideos: '[data-js="container-videos"]',
     }
 
     const botaoCategoria = document.querySelectorAll(elementos.botaoCategoria);
-    const containerVideos = document.querySelector(elementos.containerVideos);
 
     botaoCategoria.forEach(botao => {
         let nomeDaCategoria = botao.getAttribute('name');
         botao.addEventListener('click', () => {
             filtrarPorCategoria(nomeDaCategoria);
             alteraOFocoDoBotao(nomeDaCategoria);
-            mudarCategotiaNoPainelDeVideos(nomeDaCategoria);
         });
     });
 
@@ -24,12 +21,6 @@ function filtrarVideosPorBotoes() {
     //     botaoSetado[0].classList.remove('selecionado');
     //     botao.classList.add('selecionado');
     // }
-
-
-    function mudarCategotiaNoPainelDeVideos(nomeDaCategoria) {
-        const categoriaSelecionada = document.querySelector(`[name="${nomeDaCategoria}"]`).id;
-        containerVideos.setAttribute('aria-labelledby', categoriaSelecionada);
-    }
 
     function alteraOFocoDoBotao(nomeDaCategoria) {
         botaoCategoria.forEach((botao) => {

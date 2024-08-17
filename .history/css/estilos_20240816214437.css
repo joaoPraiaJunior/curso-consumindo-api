@@ -357,7 +357,6 @@ input[type="search"]::-webkit-search-results-decoration {
   right: 0;
   left: 0;
   overflow-x: scroll;
-  z-index: 1;
 }
 
 /* .superior__itens {
