@@ -22,7 +22,7 @@ function filtrarVideos() {
 
     function focarVideoFiltrado(evento) {
         evento.preventDefault();
-        const primeiroVideoFiltrado = document.querySelector(`${elementos.videos}:not([style="display: none;"]) > iframe`);
+        const primeiroVideoFiltrado = document.querySelector(`${elementos.videos}:not([style="display: none;"])`);
         primeiroVideoFiltrado?.focus();
 
     }

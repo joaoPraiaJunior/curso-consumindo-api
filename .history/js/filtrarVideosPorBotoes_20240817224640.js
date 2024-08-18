@@ -1,16 +1,16 @@
 function filtrarVideosPorBotoes() {
 
     const elementos = {
-        botaoDeCategoria: '[data-js="botao-categoria"]',
+        botaoCategoria: '[data-js="botao-categoria"]',
         videos: '[data-js="videos"]',
         categoria: '[data-js="categoria"]',
         containerVideos: '[data-js="container-videos"]',
     }
 
-    const botaoDeCategoria = document.querySelectorAll(elementos.botaoDeCategoria);
+    const botaoCategoria = document.querySelectorAll(elementos.botaoCategoria);
     const containerVideos = document.querySelector(elementos.containerVideos);
 
-    botaoDeCategoria.forEach(botao => {
+    botaoCategoria.forEach(botao => {
         let nomeDaCategoria = botao.getAttribute('name');
         botao.addEventListener('click', () => {
             filtrarPorCategoria(nomeDaCategoria);
@@ -64,8 +64,8 @@ function filtrarVideosPorBotoes() {
         const videos = document.querySelectorAll(elementos.videos);
         const valorDoFiltro = nomeDaCategoria.toLowerCase();
         videos.forEach((video) => {
-            const categoriaDoVideo = video.querySelector(elementos.categoria).textContent.toLowerCase();
-            video.style.display = valorDoFiltro !== "tudo" ? categoriaDoVideo.includes(valorDoFiltro) ? "block" : "none" : "block";
+            const categoria = video.querySelector(elementos.categoria).textContent.toLowerCase();
+            video.style.display = valorDoFiltro !== "tudo" ? categoria.includes(valorDoFiltro) ? "block" : "none" : "block";
         });
     }
 }
