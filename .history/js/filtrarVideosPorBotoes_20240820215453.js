@@ -29,13 +29,15 @@ function filtrarVideosPorBotoes() {
             const tablist = document.querySelector('[role="tablist"]');
 
             const acoesDoTeclado = {
-                'ArrowRight': () => botaoAtual === tablist.lastElementChild ? tablist.firstElementChild.focus() :
-                    botaoAtual.nextElementSibling.focus(),
-                'ArrowLeft': () => botaoAtual === tablist.firstElementChild ? tablist.lastElementChild.focus() :
-                    botaoAtual.previousElementSibling.focus(),
+                'ArrowRight': () => irParaElemento(botaoAtual.nextElementSibling, tablist.firstElementChild),
+                'ArrowLeft': () => irParaElemento(botaoAtual.previousElementSibling, tablist.lastElementChild),
                 'Home': () => tablist.firstElementChild.focus(),
                 'End': () => tablist.lastElementChild.focus(),
             };
+            
+            function irParaElemento(elementoDestino, fallbackElemento) {
+                (elementoDestino || fallbackElemento).focus();
+            }
 
             if (acoesDoTeclado[tecla]) {
                 acoesDoTeclado[tecla]();

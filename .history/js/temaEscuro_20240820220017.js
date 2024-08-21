@@ -18,15 +18,15 @@ function temaEscuro() {
             localStorage.removeItem('classe');
         }
 
-        atualizarAtributosAria(modoEscuroAtivo);
+        atualizarAtributoAria(modoEscuroAtivo);
     }
 
-    function atualizarAtributosAria(modoEscuroAtivo) {;
+    function atualizarAtributoAria(modoEscuroAtivo) {;
         botaoModoEscuro.setAttribute('aria-checked', modoEscuroAtivo);
         botaoModoEscuro.setAttribute('aria-label', modoEscuroAtivo ? 'Modo escuro da página' : 'Modo claro da página');
     }
 
-    function verificaModoEscuroAoIniciarPagina() {
+    function verificarModoEscuro() {
         const modoEscuroAtivo = localStorage.getItem('classe') === 'modo-escuro';
         botaoModoEscuro.checked = modoEscuroAtivo;
         modoEscuro(modoEscuroAtivo);
@@ -36,7 +36,7 @@ function temaEscuro() {
         modoEscuro(botaoModoEscuro.checked);
     });
 
-    window.addEventListener('load', verificaModoEscuroAoIniciarPagina);
+    window.addEventListener('load', verificarModoEscuro);
 }
 
 export default temaEscuro;

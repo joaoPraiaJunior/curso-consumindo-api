@@ -498,10 +498,6 @@ iframe {
 
   /*ESTILOS SEÇÃO VÍDEOS */
 
-  .videos__titulo {
-    padding-left: 90px;
-  }
-
   .videos__container {
     padding-left: 90px;
     padding-right: 17px;
@@ -522,10 +518,6 @@ iframe {
   }
 
   /* ESTILOS VIDEOS */
-
-  .videos__titulo {
-    padding-left: 248px;
-  }
 
   .videos__container {
     padding-right: 10px;

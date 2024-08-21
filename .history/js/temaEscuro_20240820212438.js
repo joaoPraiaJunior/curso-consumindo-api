@@ -9,24 +9,21 @@ function temaEscuro() {
     const paginaCompleta = document.querySelector(elementos.paginaCompleta);
 
 
-    function modoEscuro(modoEscuroAtivo) {
-        if (modoEscuroAtivo) {
+    function modoEscuro(ativo) {
+        if (ativo) {
             paginaCompleta.classList.add('modo-escuro');
+            botaoModoEscuro.setAttribute('aria-checked', 'true');
+            botaoModoEscuro.setAttribute('aria-label', 'Modo escuro da página');
             localStorage.setItem('classe', 'modo-escuro');
         } else {
             paginaCompleta.classList.remove('modo-escuro');
+            botaoModoEscuro.setAttribute('aria-checked', 'false');
+            botaoModoEscuro.setAttribute('aria-label', 'Modo claro da página');
             localStorage.removeItem('classe');
         }
-
-        atualizarAtributosAria(modoEscuroAtivo);
     }
 
-    function atualizarAtributosAria(modoEscuroAtivo) {;
-        botaoModoEscuro.setAttribute('aria-checked', modoEscuroAtivo);
-        botaoModoEscuro.setAttribute('aria-label', modoEscuroAtivo ? 'Modo escuro da página' : 'Modo claro da página');
-    }
-
-    function verificaModoEscuroAoIniciarPagina() {
+    function verificarModoEscuro() {
         const modoEscuroAtivo = localStorage.getItem('classe') === 'modo-escuro';
         botaoModoEscuro.checked = modoEscuroAtivo;
         modoEscuro(modoEscuroAtivo);
@@ -35,8 +32,7 @@ function temaEscuro() {
     botaoModoEscuro.addEventListener('change', function() {
         modoEscuro(botaoModoEscuro.checked);
     });
-
-    window.addEventListener('load', verificaModoEscuroAoIniciarPagina);
+    window.addEventListener('load', verificarModoEscuro);
 }
 
 export default temaEscuro;
