@@ -37,6 +37,10 @@ function filtrarVideosPorBotoes() {
                 'End': () => tablist.lastElementChild.focus(),
             };
 
+
+            function mudarCategoriaComTeclado(tecla) {
+            }
+
             if (acoesDoTeclado[tecla]) {
                 acoesDoTeclado[tecla]();
             }

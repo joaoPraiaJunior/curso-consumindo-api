@@ -15,7 +15,7 @@ function expandirMenu() {
         const quantidadeDeItens = itensDaSecao.length;
 
         if (quantidadeDeItens > 5) {
-            const excessoDeItensDoMenu = Array.from(itensDaSecao).slice(5);
+            const excessoDeItensDoMenu = [...itensDaSecao].slice(5);
             esconderOExcessoDeItens(excessoDeItensDoMenu);
             criarBotaoDeExpandir(secao, excessoDeItensDoMenu);
         }
