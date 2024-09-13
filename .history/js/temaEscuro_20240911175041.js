@@ -1,7 +1,7 @@
 function temaEscuro() {
 	const elementos = {
 		botaoModoEscuro: '[data-js="modo-escuro"]',
-		paginaCompleta: ':root',
+		paginaCompleta: ":root",
 	};
 
 	const botaoModoEscuro = document.querySelector(elementos.botaoModoEscuro);
@@ -9,35 +9,36 @@ function temaEscuro() {
 
 	function modoEscuro(modoEscuroAtivo) {
 		if (modoEscuroAtivo) {
-			paginaCompleta.classList.add('modo-escuro');
-			localStorage.setItem('classe', 'modo-escuro');
+			paginaCompleta.classList.add("modo-escuro");
+			localStorage.setItem("classe", "modo-escuro");
 		} else {
-			paginaCompleta.classList.remove('modo-escuro');
-			localStorage.removeItem('classe');
+			paginaCompleta.classList.remove("modo-escuro");
+			localStorage.removeItem("classe");
 		}
 
 		atualizarAtributosAria(modoEscuroAtivo);
 	}
 
 	function atualizarAtributosAria(modoEscuroAtivo) {
-		botaoModoEscuro.setAttribute('aria-checked', modoEscuroAtivo);
+		botaoModoEscuro.setAttribute("aria-checked", modoEscuroAtivo);
 		botaoModoEscuro.setAttribute(
-			'aria-label',
-			modoEscuroAtivo ? 'Modo escuro da página' : 'Modo claro da página',
+			"aria-label",
+			modoEscuroAtivo ? "Modo escuro da página" : "Modo claro da página",
 		);
 	}
 
 	function verificaModoEscuroAoIniciarPagina() {
-		const modoEscuroAtivo = localStorage.getItem('classe') === 'modo-escuro';
+		const modoEscuroAtivo =
+			localStorage.getItem("classe") === "modo-escuro";
 		botaoModoEscuro.checked = modoEscuroAtivo;
 		modoEscuro(modoEscuroAtivo);
 	}
 
-	botaoModoEscuro.addEventListener('change', function () {
+	botaoModoEscuro.addEventListener("change", function () {
 		modoEscuro(botaoModoEscuro.checked);
 	});
 
-	window.addEventListener('load', verificaModoEscuroAoIniciarPagina);
+	window.addEventListener("load", verificaModoEscuroAoIniciarPagina);
 }
 
 export default temaEscuro;

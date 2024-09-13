@@ -28,7 +28,8 @@ function temaEscuro() {
 	}
 
 	function verificaModoEscuroAoIniciarPagina() {
-		const modoEscuroAtivo = localStorage.getItem('classe') === 'modo-escuro';
+		const modoEscuroAtivo =
+			localStorage.getItem('classe') === 'modo-escuro';
 		botaoModoEscuro.checked = modoEscuroAtivo;
 		modoEscuro(modoEscuroAtivo);
 	}

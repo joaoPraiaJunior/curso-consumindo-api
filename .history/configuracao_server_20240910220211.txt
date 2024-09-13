@@ -1,0 +1,20 @@
+Instalar o servidor backend:
+npm install -g json-server@0.17.4
+
+Executar o servidor:
+json-server --watch backend/videos.json
+
+
+atalhos do vscode
+
+selecionar todos itens de uma vez
+
+selecione uma tag ctrl + shift + L
+
+selecione tag por tag ctrl + D
+
+buscar a classe seleciona a classe e pressiona ctrl + shift + f
+
+pwd = verificar o diretório
+mkdir = criar nova pasta\
+code . = abrir a pasta no vscode

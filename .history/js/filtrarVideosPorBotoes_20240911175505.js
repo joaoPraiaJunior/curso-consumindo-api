@@ -28,9 +28,13 @@ function filtrarVideosPorBotoes() {
 
 			const acoesDoTeclado = {
 				ArrowRight: () =>
-					botaoAtual === tablist.lastElementChild ? tablist.firstElementChild.focus() : botaoAtual.nextElementSibling.focus(),
+					botaoAtual === tablist.lastElementChild
+						? tablist.firstElementChild.focus()
+						: botaoAtual.nextElementSibling.focus(),
 				ArrowLeft: () =>
-					botaoAtual === tablist.firstElementChild ? tablist.lastElementChild.focus() : botaoAtual.previousElementSibling.focus(),
+					botaoAtual === tablist.firstElementChild
+						? tablist.lastElementChild.focus()
+						: botaoAtual.previousElementSibling.focus(),
 				Home: () => tablist.firstElementChild.focus(),
 				End: () => tablist.lastElementChild.focus(),
 			};
@@ -61,8 +65,15 @@ function filtrarVideosPorBotoes() {
 		const videos = document.querySelectorAll(elementos.videos);
 		const valorDoFiltro = nomeDaCategoria.toLowerCase();
 		videos.forEach((video) => {
-			const categoriaDoVideo = video.querySelector(elementos.categoria).textContent.toLowerCase();
-			video.style.display = valorDoFiltro !== 'tudo' ? (categoriaDoVideo.includes(valorDoFiltro) ? 'block' : 'none') : 'block';
+			const categoriaDoVideo = video
+				.querySelector(elementos.categoria)
+				.textContent.toLowerCase();
+			video.style.display =
+				valorDoFiltro !== 'tudo'
+					? categoriaDoVideo.includes(valorDoFiltro)
+						? 'block'
+						: 'none'
+					: 'block';
 		});
 	}
 }

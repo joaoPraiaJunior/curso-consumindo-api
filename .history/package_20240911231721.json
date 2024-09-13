@@ -1,0 +1,32 @@
+{
+	"name": "consumindo_api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "script.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"api-local": "json-server --watch backend/videos.json",
+		"lint": "eslint ./js/."
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@eslint/js": "^9.10.0",
+		"eslint": "9.10.0",
+		"globals": "15.9.0",
+		"prettier": "3.3.3"
+	},
+	"dependencies": {
+		"consumindo_api": "file:",
+		"json-server": "1.0.0-beta.2"
+	},
+	"prettier": {
+		"tabWidth": 4,
+		"printWidth": 150,
+		"useTabs": true,
+		"semi": true,
+		"singleQuote": true,
+		"bracketSpacing": true,
+		"arrowParens": "always"
+	}
+}

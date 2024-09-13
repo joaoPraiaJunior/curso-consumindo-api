@@ -31,7 +31,7 @@ function videos() {
 		const iframe = document.createElement('iframe');
 		const div = document.createElement('div');
 		const img = document.createElement('img');
-		const h2 = document.createElement('h2');
+		const h3 = document.createElement('h3');
 		const p = document.createElement('p');
 		const p2 = document.createElement('p');
 
@@ -49,9 +49,9 @@ function videos() {
 		img.src = `${video.imagem}`;
 		img.alt = `Canal ${video.canal}`;
 
-		h2.classList.add('titulo-video');
-		h2.dataset.js = 'titulo-video';
-		h2.textContent = video.titulo;
+		h3.classList.add('titulo-video');
+		h3.dataset.js = 'titulo-video';
+		h3.textContent = video.titulo;
 
 		p.classList.add('titulo-canal');
 		p.textContent = video.descricao;
@@ -64,7 +64,7 @@ function videos() {
 		li.appendChild(div);
 
 		div.appendChild(img);
-		div.appendChild(h2);
+		div.appendChild(h3);
 		div.appendChild(p);
 		div.appendChild(p2);
 

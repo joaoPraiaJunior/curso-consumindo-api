@@ -2,7 +2,6 @@ Instalar o servidor backend:
 npm install -g json-server@0.17.4 o -g instala de forma global
 npm uninstall -g json-server remove o global
 npm install json-server instala o json server local
-npm install json-server --save-dev instala local como dev dependências
 npx json-server --version  verifica a versão local
 npx json-server --watch backend/videos.json coloca para funcionar a versão local
 caso o json-server nao funcione: Set-ExecutionPolicy RemoteSigned 
@@ -40,29 +39,3 @@ verificar versão: npx prettier -v
 npm install --help
 npx --help
 npm init --help
-
-
-
-Comando	Opções	Descrição
-npm init	--yes ou -y	Cria o arquivo package.json.
-npm init <inicializador>		Executa o pacote create-<inicializador>. Se o <inicializador> estiver na sintaxe @<escopo>/<pacote>, será executado o pacote @<escopo>/create-<pacote>.
-npm install		Instala ou atualiza todas as dependências listadas no package.json. Assim, a pasta node_modules será criada ou atualizada.
-npm install <pacote>[@<versão>]	--save-dev ou -D, --save-exact ou -E, --global ou -g	Instala o <pacote>. Se a <versão> não for especificada, será instalada a mais recente.
-npm uninstall <pacote>	--global / -g	Desinstala o <pacote>.
-npx <pacote>[@<versão>]		Executa o <pacote>. Se a <versão> não for especificada, será executada a mais recente.
-npm run <script>		Executa o <script> do package.json.
-<comando> --help		Mostra uma ajuda rápida do <comando>.
-npm help <comando>		Abre uma página offline da documentação do <comando>, mostrando informações completas e detalhadas.
-npm list - lista todas as dependências
-
-Instalar o axios
-npm install axios
-
-
-vite 
-npm create vite@latest
-depois siga os dizeres do terminal.
-node-js-vidflow-vite
-npm run build converte o projeto para arquivos que vão rodar em produção
-npm run preview analisa se o projeto em produção está ok
-npm run build-preview depois de ter criado o script ele roda o build automaticamente e atualiza o preview
